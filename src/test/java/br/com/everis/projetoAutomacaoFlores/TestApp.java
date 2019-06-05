@@ -1,15 +1,11 @@
 package br.com.everis.projetoAutomacaoFlores;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
 
 
 public class TestApp {
@@ -50,8 +46,6 @@ static WebDriver driver;
         driver.findElement(By.id("nome_lp")).sendKeys("Lucas Gabriel");
         driver.findElement(By.id("telefone_lp")).sendKeys("11999999999");
         driver.findElement(By.id("senha_lp")).sendKeys("1234567890*");
-        
-        Thread.sleep(5000);
         
         driver.quit();
 	
