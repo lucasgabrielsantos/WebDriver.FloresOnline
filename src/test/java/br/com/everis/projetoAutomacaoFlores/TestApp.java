@@ -40,10 +40,23 @@ static WebDriver driver;
 		 	driver.findElement(By.name("q")).sendKeys("Flores Online");
 	        driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
         
-        //Realizando login no Flores Online .
-        driver.findElement(By.xpath("//*[@id=\"rso\"]/div/div/div[1]/div/div/div[1]/a")).click();;
-        driver.findElement(By.xpath("/html/body/section/div/div/nav/div/div/div")).click();
-		
-	}
+        //Realizando Cadastro no Flores Online .
+        driver.findElement(By.xpath("//*[@id=\"rso\"]/div/div/div[1]/div/div/div[1]/a")).click();
+        driver.findElement(By.xpath("//div[@class=\"homemain-logged-or-notlogged2\"]/a")).click();
+        
+       //Inserindo os dados.
+        driver.findElement(By.xpath("//div[@id=\"general-login-ajax-content\"]//a[@class=\"texto-grande texto-verde\"]")).click();
+        driver.findElement(By.id("email_lp")).sendKeys("lucasgabrielsantos12345@outlook.com");
+        driver.findElement(By.id("nome_lp")).sendKeys("Lucas Gabriel");
+        driver.findElement(By.id("telefone_lp")).sendKeys("11999999999");
+        driver.findElement(By.id("senha_lp")).sendKeys("1234567890*");
+        
+        Thread.sleep(5000);
+        
+        driver.quit();
+	
+	
+	}	
     
 }
+	
